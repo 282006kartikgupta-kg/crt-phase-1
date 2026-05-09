@@ -1,0 +1,117 @@
+// -----------------------------------Functions------------------------------------
+
+//  PROBLEM 01: BASIC FUNCTION
+//  Task: write a message function and call it
+
+#include<iostream>
+using namespace std;
+
+//Message Function
+void printMsg(){
+    cout<<"Hello everyone, I'm king Arthur";
+}
+
+int main(){
+//function call
+printMsg();
+
+return 0;
+}
+
+//  PROBLEM 02: BASIC FUNCTION
+//  Task: Take number of coke bottles and print the total volume of the all the bottles combined
+
+#include<iostream>
+using namespace std;
+// With argument and return type
+int cokeVol1(int bottles){
+    cout<<"with return type func"<<endl;
+    return bottles * 750;
+}
+
+// With argument and without return type
+void cokeVol2(int bottles){
+    cout<<"withour return type func"<<endl;
+    cout<<"Total volume: "<< bottles * 750;
+}
+
+int main(){
+int bottles;
+cout<<"Enter number of coke bottles: ";
+cin>>bottles;
+
+cout<<cokeVol1(bottles)<<endl;
+cokeVol2(bottles);
+return 0;
+}
+
+// -----------------------------------Pointers------------------------------------
+
+//  PROBLEM 03: USING POINTER
+//  Task: show basic pointer usage 
+
+#include<iostream>
+using namespace std;
+
+int main(){
+int value = 101;
+int *ptr = &value;
+
+cout<<"Value : "<<*ptr<<endl;
+cout<<"Address : "<<ptr<<endl;
+
+*ptr = 2000;
+cout<<"Value : "<<*ptr<<endl;
+cout<<"Address : "<<ptr<<endl;
+return 0;
+}
+
+//  PROBLEM 04: USING POINTER
+//  Task: WAP that applies 10% discount using reference update the cost
+
+#include<iostream>
+using namespace std;
+
+//discount func
+void discount(float &bill){
+    bill = bill * 0.9;
+    
+}
+
+int main(){
+float bill;
+cout<<"Enter bill: ";
+cin>>bill;
+
+discount(bill);
+cout<<"Discounted Bill: "<<bill;
+
+return 0;
+}
+
+//  PROBLEM 05: USING POINTER
+//  Task: Swap two values
+
+
+#include<iostream>
+using namespace std;
+
+void swapfunc(int &a, int &b){
+    int *p1 = &a;
+    int *p2 = &b;
+
+    int temp = *p1;
+    *p1 = *p2;
+    *p2 = temp;
+}
+
+int main(){
+int a , b;
+cout<<"Enter numbers: ";
+cin>>a>>b;
+
+swapfunc(a,b);
+cout<<a<<" "<<b;
+
+return 0;
+}
