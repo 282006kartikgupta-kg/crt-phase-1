@@ -1,0 +1,195 @@
+//  PROBLEM 01: THE IF CONDITION 
+//  Task: Verify if a user is eligible to vote
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int age;
+    cin >> age;
+    // if condition 
+    if(age >= 18) { 
+        cout << "Eligible For vote";
+    } 
+    return 0;
+}
+
+//  PROBLEM 02: THE IF-ELSE BRANCH 
+//  Task: Handle both eligible and ineligible cases
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int age;
+    cin >> age;
+    // if condition 
+    if(18<=age<=79) {
+        cout << "Eligible For vote - Working Citizen";
+    }
+    //else if condition 
+    else if(80<=age<=100){
+        cout<< "Eligible to vote - Senior Citizen";
+    }
+    else if(age>100){
+        cout<< "Eligible to vote - Old aged";
+    }
+    //else  condition
+    else if(0<age<=17){
+        cout << "Not Eligible For vote";
+    }
+    else{
+        cout<<"Invalid input";
+    }
+    return 0;
+}
+
+//  PROBLEM 03: NESTED IF-ELSE LOGIC 
+//  Task: Take a percentage input and designate a grade to it
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int per;
+    cin >> per;
+    
+    if(per >= 60) {
+        if (per >= 70) {
+            if(per >= 80){
+                if(per >= 90){
+                    cout<<"A"<<endl;
+                }else{
+                    cout<<"B"<<endl;
+                } 
+            }else {
+                cout<<"C"<<endl;
+                }
+        }else {
+            cout<<"D"<<endl;
+        }
+    }else {
+        cout<<"F"<<endl;
+    }
+    return 0;
+}
+
+//  PROBLEM 04: TERNARY OPERATOR 
+//  Task: Find the greater number in a single line
+
+#include<iostream>
+using namespace std;
+
+int main(){
+int a,b;
+cout<<"Enter numbers: "<<endl;
+cin>>a>>b;
+
+(a>b) ? cout<<"a is greater" : cout<<"b is greater";
+
+
+return 0;
+}
+
+//  PROBLEM 05: FOR LOOP 
+//  Task: print 1 to n and skip any num divisible by 4
+
+#include<iostream>
+using namespace std;
+
+int main(){
+int n;
+cout<<"Enter number: ";
+cin>>n;
+
+for(int i=1; i<=n; i++){
+    if(i%4==0){
+        continue;
+    } else{
+        cout<<i<<" ";
+    }
+}
+return 0;
+}
+
+//  PROBLEM 06: NESTED IF-ELSE LOGIC 
+//  Task: Take a year and check if it is a leap year or not
+
+#include<iostream>
+using namespace std;
+
+int main(){
+int year;
+cout<<"Enter year: ";
+cin>>year;
+
+if(year%4 == 0){
+    if(year%100 != 0){
+        if(year%400==0){
+        cout<<"It is a Leap year";
+    } else{
+        cout<<"Not a leap year";
+    }
+    } else {
+        cout<<"It is a leap year";
+    }
+    } else {
+        cout<<"Not a leap year";
+    } 
+return 0;
+}
+
+//  PROBLEM 07: NESTED IF-ELSE LOGIC 
+//  Task: Take a alphabet and check whether it is vowel or consonent
+
+#include<iostream>
+using namespace std;
+
+int main(){
+char alp;
+cout<<"Enter a alphaber: ";
+cin>>alp;
+
+if((alp >= 'a')&&(alp <= 'z') || (alp >= 'A' && alp <= 'Z')){
+        if(alp=='A' || alp=='a' || alp=='E' || alp=='e' ||
+           alp=='I' || alp=='i' || alp=='O' || alp=='o' ||
+           alp=='U' || alp=='u'){
+        cout<<"It is a Vowel";
+    } else {
+        cout<<"It is a consonent";
+    }
+}
+return 0;
+}
+
+//  PROBLEM 08: SWITCH CASE LOGIC 
+//  Task: Take input and print message accordingly
+
+#include<iostream>
+using namespace std;
+
+int main(){
+char call;
+cout<<"Press : ";
+cin>>call;
+
+switch (call)
+{
+case '1':
+    cout<<"For Support";
+    break;
+case '2':
+    cout<<"For Billing";
+    break;
+case '3':
+    cout<<"For Technical issue";
+    break;
+case '0':
+    cout<<"To speak with agent";
+    break;
+
+default:
+    break;
+}
+return 0;
+}
